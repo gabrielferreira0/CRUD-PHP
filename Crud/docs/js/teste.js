@@ -3,30 +3,29 @@ $(document).ready(function () {
     CPF.mask('999.999.999-99');
 
     $('#teste').on('click', '#cadastrar', function () {
-        let Username = $("#Username").val();
-        let Senha = $("#Senha").val();
-        let Email = $("#Email").val();
+        let username = $("#Username").val();
+        let senha = $("#Senha").val();
+        let email = $("#Email").val();
         let CPF = $("#CPF").val();
-        let Nascimento = $("#dt-nascimento").val();
-        let Cidade = $("#Cidade").val();
-        console.log("Username: " + Username + " Senha: " + Senha + " Email: " + Email + " CPF: " + CPF + " Nascimento: " + Nascimento + " Cidade: " + Cidade);
+        let nascimento = $("#dt-nascimento").val();
+        let cidade = $("#Cidade").val();
+        console.log("Username: " + username + " Senha: " + senha + " Email: " + email + " CPF: " + CPF + " Nascimento: " + nascimento + " Cidade: " + cidade);
         let url = '../crud/class/index.php';
         $.ajax({
             type: "POST",
-            dataType: 'json',
+            dataType: 'text',
             url: url,
             async: true,
             data: {
                 rq: 'cadastrar',
-                Username: Username,
-                Senha: Senha,
-                Email: Email,
+                Username: username,
+                Senha: senha,
+                Email: email,
                 CPF: CPF,
-                Nascimento: Nascimento,
-                Cidade: Cidade
+                Nascimento: nascimento,
+                Cidade: cidade
             },
             success: function (rs) {
-                alert(rs);
                 $('#alerta').show().fadeOut(3000);
             },
             error: function (e) {
