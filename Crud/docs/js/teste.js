@@ -10,9 +10,9 @@ $(document).ready(function () {
         let Nascimento = $("#dt-nascimento").val();
         let Cidade = $("#Cidade").val();
         console.log("Username: " + Username + " Senha: " + Senha + " Email: " + Email + " CPF: " + CPF + " Nascimento: " + Nascimento + " Cidade: " + Cidade);
-        let url = '../crud/class/Index.php';
+        let url = '../crud/class/index.php';
         $.ajax({
-            type: 'post',
+            type: "POST",
             dataType: 'json',
             url: url,
             async: true,
@@ -25,11 +25,12 @@ $(document).ready(function () {
                 Nascimento: Nascimento,
                 Cidade: Cidade
             },
-            success: function (response) {
+            success: function (rs) {
+                alert(rs);
                 $('#alerta').show().fadeOut(3000);
             },
             error: function (e) {
-                bootbox.alert("<h2>Erro :(</h2><br/><center>Não foi possivel realizar essa operação.</center></br>");
+                bootbox.alert("<h2>Erro :(</h2><br/>Não foi possivel realizar essa operação.</br>");
             }
         });
 
