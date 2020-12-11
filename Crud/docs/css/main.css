@@ -1,4 +1,9 @@
-.teste2 {
-    font-size: 75px;
+.titulo {
+    font-size: 55px;
 }
 
+.caixa {
+    margin-top: 5px;
+    border-radius: 25px;
+    background: #D7DEDC;
+}
