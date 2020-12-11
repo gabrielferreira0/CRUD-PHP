@@ -10,7 +10,7 @@ $(document).ready(function () {
         let Nascimento = $("#dt-nascimento").val();
         let Cidade = $("#Cidade").val();
         console.log("Username: " + Username + " Senha: " + Senha + " Email: " + Email + " CPF: " + CPF + " Nascimento: " + Nascimento + " Cidade: " + Cidade);
-        let url = '../crud/class/index.php';
+        let url = '../crud/class/Index.php';
         $.ajax({
             type: 'post',
             dataType: 'json',
