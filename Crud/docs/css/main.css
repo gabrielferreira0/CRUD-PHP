@@ -12,7 +12,6 @@ body {
 }
 
 .caixa {
-    margin-top: 5px;
     border-radius: 25px;
     background:#343a40;
 }
@@ -20,4 +19,16 @@ body {
 .menu a:hover{
     background-color: #4faddb;
     color: #000;
+}
+
+.destaque{
+    background: #f50a31;
+    color: #fff;
+    border-radius: 15px;
+    margin: 8px;
+}
+.funcionaa{
+    color: #fff;
+    border-radius: 15px;
+    margin: 8px;
 }
