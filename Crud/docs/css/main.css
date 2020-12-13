@@ -1,9 +1,23 @@
+
+body {
+    background-color: lightgray;
+}
+
+.nasa{
+    color: lightgray;
+    font-size: 60px;
+}
 .titulo {
-    font-size: 55px;
+    font-size: 45px;
 }
 
 .caixa {
     margin-top: 5px;
     border-radius: 25px;
-    background: #D7DEDC;
+    background:#343a40;
+}
+
+.menu a:hover{
+    background-color: #4faddb;
+    color: #000;
 }
