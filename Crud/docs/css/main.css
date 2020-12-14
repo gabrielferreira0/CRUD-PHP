@@ -3,22 +3,13 @@ body {
     background-color: lightgray;
 }
 .geral{
-    min-height: 80%;
-    position: relative;
+    min-height: 84%;
 }
 .nasa{
     color: lightgray;
     font-size: 60px;
 }
-.cresce{
-    font-size: 20px;
-    text-decoration: none;
-    color:white;
-}
-.cresce:hover{
-    text-decoration: none;
-    color:white;
-}
+
 
 .titulo {
     font-size: 45px;
@@ -32,11 +23,8 @@ body {
     background-color: #4faddb;
     color: #000;
 }
-.input-group-text{
-    border-radius: 15px;
-}
 
-.form-control{
+.arredondar{
     border-radius: 15px;
 }
 .destaque{
@@ -55,10 +43,4 @@ footer {
     position: relative;
     bottom:0;
     width:100%;
-}
-.button{
-    border-radius: 15px;
-}
-.button:hover{
-    transform: scale(1.1);
 }
