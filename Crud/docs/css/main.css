@@ -1,16 +1,28 @@
-
+html,body{height: 100%;}
 body {
     background-color: lightgray;
 }
-
+.geral{
+    min-height: 80%;
+    position: relative;
+}
 .nasa{
     color: lightgray;
     font-size: 60px;
 }
+.cresce{
+    font-size: 20px;
+    text-decoration: none;
+    color:white;
+}
+.cresce:hover{
+    text-decoration: none;
+    color:white;
+}
+
 .titulo {
     font-size: 45px;
 }
-
 .caixa {
     border-radius: 25px;
     background:#343a40;
@@ -20,7 +32,13 @@ body {
     background-color: #4faddb;
     color: #000;
 }
+.input-group-text{
+    border-radius: 15px;
+}
 
+.form-control{
+    border-radius: 15px;
+}
 .destaque{
     background: #f50a31;
     color: #fff;
@@ -31,4 +49,16 @@ body {
     color: #fff;
     border-radius: 15px;
     margin: 8px;
+}
+
+footer {
+    position: relative;
+    bottom:0;
+    width:100%;
+}
+.button{
+    border-radius: 15px;
+}
+.button:hover{
+    transform: scale(1.1);
 }
