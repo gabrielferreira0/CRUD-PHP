@@ -26,6 +26,7 @@ $(document).ready(function () {
                 Cidade: cidade
             },
             success: function (rs) {
+                alert(rs);
                 $('#alerta').show().fadeOut(3000);
             },
             error: function (e) {

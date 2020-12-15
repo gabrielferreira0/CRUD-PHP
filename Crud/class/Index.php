@@ -10,7 +10,7 @@ class modulo
         $CPF = $_POST["CPF"];
         $Nascimento = $_POST["Nascimento"];
         $Cidade = $_POST["Cidade"];
-        echo "Função setUser entando";
+        echo "Função setUser entrando";
 
     }
 
