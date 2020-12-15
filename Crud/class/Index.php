@@ -2,16 +2,29 @@
 
 class modulo
 {
-//funções aqui
+    public function setUser()
+    {
+        $Username = $_POST["Username"];
+        $Senha = $_POST["Senha"];
+        $Email = $_POST["Email"];
+        $CPF = $_POST["CPF"];
+        $Nascimento = $_POST["Nascimento"];
+        $Cidade = $_POST["Cidade"];
+        echo "Função setUser entando";
+
+    }
 
 }
 
 if (isset($_POST["rq"])) {
     session_start();
+    $loadClass = new Modulo();
     $request = $_POST["rq"];
+
+
     switch ($request) {
         case 'cadastrar':
-            echo 'Deu certo!';
+            echo $loadClass->setUser();
             break;
     }
 
