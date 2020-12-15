@@ -1,11 +1,21 @@
-html,body{height: 100%;}
+html, body {
+    height: 100%;
+}
+
 body {
-    background-color: lightgray;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
-.geral{
+
+.geral {
     min-height: 84%;
+    color: white;
 }
-.nasa{
+
+.nasa {
     color: lightgray;
     font-size: 60px;
 }
@@ -13,34 +23,37 @@ body {
 
 .titulo {
     font-size: 45px;
-}
-.caixa {
-    border-radius: 25px;
-    background:#343a40;
+
 }
 
-.menu a:hover{
+.caixa {
+    border-radius: 25px;
+    background: #343a40;
+}
+
+.menu a:hover {
     background-color: #4faddb;
     color: #000;
 }
 
-.arredondar{
+.arredondar {
     border-radius: 15px;
 }
-.destaque{
+
+.destaque {
     background: #f50a31;
     color: #fff;
     border-radius: 15px;
     margin: 8px;
 }
-.funcionaa{
+
+.loginInput {
     color: #fff;
     border-radius: 15px;
     margin: 8px;
 }
 
-/* @media  (max-width: 1200px) {
-    body {
-      background-color: red;
-    }
-  } */
+.cardFormulario {
+    background: rgba(0, 0, 0, 0.4);
+    margin-bottom: 15%;
+}
