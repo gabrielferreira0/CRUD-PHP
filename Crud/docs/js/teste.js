@@ -3,13 +3,28 @@ $(document).ready(function () {
     CPF.mask('999.999.999-99');
 
     $('#teste').on('click', '#cadastrar', function () {
+        let erromsg = '<div class="erromsg">Preencha o campo <span></span></div>';
         let username = $("#Username").val();
         let senha = $("#Senha").val();
         let email = $("#Email").val();
         let CPF = $("#CPF").val();
         let nascimento = $("#dt-nascimento").val();
         let cidade = $("#Cidade").val();
-        console.log("Username: " + username + " Senha: " + senha + " Email: " + email + " CPF: " + CPF + " Nascimento: " + nascimento + " Cidade: " + cidade);
+
+        // let validarUsername = $("#Username");
+        // let validarSenha = $("#Senha");
+        // let validaremail = $("#email");
+        // let validarCPF = $("#CPF");
+        // let validarnascimento = $("#nascimento");
+        // let validarcidade = $("#cidade");
+
+        // if(!validarUsername.val() || validarUsername.val().length < 5){
+        //     $('#alertaUser').show().fadeOut(5000);
+        //     return;
+        //  }
+
+
+         
         let url = '../crud/class/index.php';
         $.ajax({
             type: "POST",
@@ -26,8 +41,8 @@ $(document).ready(function () {
                 Cidade: cidade
             },
             success: function (rs) {
-                alert(rs);
-                $(rs).show().fadeOut(3000);
+                // alert(rs);
+                $(rs).show().fadeOut(4000);
             },
             error: function (e) {
                 bootbox.alert("<h2>Erro :(</h2><br/>Não foi possivel realizar essa operação.</br>");

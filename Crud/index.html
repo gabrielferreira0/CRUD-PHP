@@ -13,6 +13,7 @@
     <script src="docs/js/teste.js"></script>
     <link rel="stylesheet" href="docs/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <script src="docs/plugins/bootstrap-4.1.3-dist/js/validator.min.js"></script>
 </head>
 
 <body id="teste">
@@ -52,7 +53,7 @@
         <div class="card cardFormulario ">
             <div class="card-body">
                 <h3 class="fas fa-address-card  text-center titulo"> Cadastro </h3>
-                <form class="formulario">
+                <form id="formulario" class="formulario" data-toggle="validator">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="Username">Usuario:</label>
@@ -60,18 +61,19 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text arredondar"> <i class="fas fa-user"></i></span>
                                 </div>
-                                <input type="text" class="form-control arredondar" id="Username" placeholder="Usuario">
+                                <input type="text" class="form-control arredondar" id="Username" placeholder="Usuario"   required>
                             </div>
+                            <div class="error help-block with-errors"></div>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="Senha">Senha:</label>
                             <div class="input-group">
-
                                 <div class="input-group-prepend">
                                     <span class="input-group-text arredondar"> <i class="fas fa-lock"></i></span>
                                 </div>
-                                <input type="password" class="form-control arredondar" id="Senha" placeholder="Senha">
+                                <input type="password" class="form-control arredondar" id="Senha" placeholder="Senha"  required>
                             </div>
+                            <div class="error help-block with-errors"></div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -80,8 +82,9 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text arredondar"> <i class="fas fa-envelope"></i></span>
                             </div>
-                            <input type="email" class="form-control arredondar" id="Email" placeholder="nome@exemplo.com">
+                            <input type="email" class="form-control arredondar" id="Email" placeholder="nome@exemplo.com" data-error="Por favor, informe um email valido." required>
                         </div>
+                        <div class="error help-block with-errors"></div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-xl-6">
@@ -91,11 +94,11 @@
                                     <span class="input-group-text arredondar"> <i class="fas fa-id-card-alt"></i></span>
                                 </div>
                                 <input type="text" class="form-control arredondar" id="CPF" placeholder="123.123.123-00"
-                                       max="11">
+                                       max="11"  data-error="Por favor, informe um CPF correto." required>
                             </div>
+                            <div class="error help-block with-errors"></div>
                         </div>
-                    </div>
-                    <div class="form-row">
+                    
                         <div class="form-group col-xl-6">
                             <label for="dt-nascimento">Data de nascimento:</label>
                             <div class="input-group">
@@ -104,8 +107,9 @@
                                             class="fas fa-calendar-alt"></i></span>
                                 </div>
                                 <input type="date" class="form-control arredondar" id="dt-nascimento"
-                                       placeholder="Nascimento">
+                                       placeholder="Nascimento" required>
                             </div>
+                            <div class="error help-block with-errors"></div>
                         </div>
                     </div>
                     <div class="form-row">
@@ -116,12 +120,13 @@
                                     <span class="input-group-text arredondar"> <i class="fas fa-city"></i></span>
                                 </div>
                                 <input type="text" class="form-control arredondar" id="Cidade"
-                                       placeholder="Brasilia-DF">
+                                       placeholder="Brasilia-DF" required>
                             </div>
+                            <div class="error help-block with-errors"></div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <button id="cadastrar" type="button" class="btn btn-success ">Cadastrar</button>
+                        <button id="cadastrar" type=" button submit" class="btn btn-success ">Cadastrar</button>
                     </div>
                     <div class="alert alert-success testando" id="alerta" role="alert" style="display: none;">
                         <strong>Successo!</strong> você realizou seu <strong>Cadastro!</strong>
@@ -132,8 +137,6 @@
                 </form>
             </div>
         </div>
-
-
     </div>
 </div>
 <!-- Footer -->
