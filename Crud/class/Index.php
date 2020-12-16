@@ -4,16 +4,21 @@ class modulo
 {
     public function setUser()
     {
-        $Username = $_POST["Username"];
-        $Senha = $_POST["Senha"];
-        $Email = $_POST["Email"];
+        $boardDB = new Database("treinando");
+        $userName = $_POST["Username"];
+        $senha = $_POST["Senha"];
+        $email = $_POST["Email"];
         $CPF = $_POST["CPF"];
-        $Nascimento = $_POST["Nascimento"];
-        $Cidade = $_POST["Cidade"];
-        echo "Função setUser entrando";
+        $nascimento = $_POST["Nascimento"];
+        $cidade = $_POST["Cidade"];      
+        // return date("d/m/Y", strtotime($nascimento));
+        $sql = "insert into Users(username,senha,email,cpf,nascimento,cidade) values ('$userName','$senha','$email','$CPF','$nascimento','$cidade');";
+        $result = pg_query($dbconn, $sql);
+        if($result){
+            echo "Insert sucesso";
+          }  
 
     }
-
 }
 
 if (isset($_POST["rq"])) {
@@ -21,13 +26,13 @@ if (isset($_POST["rq"])) {
     $loadClass = new Modulo();
     $request = $_POST["rq"];
 
+    include_once "conexaoDB.php";
 
     switch ($request) {
         case 'cadastrar':
             echo $loadClass->setUser();
             break;
     }
-
 }
 
 ?>
