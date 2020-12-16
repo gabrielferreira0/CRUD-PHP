@@ -27,7 +27,7 @@ $(document).ready(function () {
             },
             success: function (rs) {
                 alert(rs);
-                $('#alerta').show().fadeOut(3000);
+                $(rs).show().fadeOut(3000);
             },
             error: function (e) {
                 bootbox.alert("<h2>Erro :(</h2><br/>Não foi possivel realizar essa operação.</br>");
