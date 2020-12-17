@@ -9,12 +9,14 @@ body {
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    margin-bottom: 50px;
 }
 
 .geral {
-    /*min-height: 84%;*/
+    min-height: 84%;
     color: white;
+    align-items: center;
+    display: flex;
+
 }
 
 .nasa {
@@ -56,15 +58,9 @@ body {
 
 .cardFormulario {
     background: rgba(0, 0, 0, 0.4);
+    /* margin-bottom: 15%; */
 }
 
 .error{
-    color:red;
+color: red;;
 }
-
-footer{
-    /*position:absolute;*/
-    bottom:0;
-    width: 100%;
-}
-
