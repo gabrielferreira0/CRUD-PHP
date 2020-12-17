@@ -26,6 +26,12 @@ $(document).ready(function () {
             success: function (rs) {
                 // alert(rs)
                 $(rs).show().fadeOut(4000);
+                $("#Email").val("");
+                $("#Username").val("");
+                $("#CPF").val("");
+                $("#Senha").val("");
+                $("#Cidade").val("");
+                $("#dt-nascimento").val("");
             },
             error: function (e) {
                 bootbox.alert("<h2>Erro :(</h2><br/>Não foi possivel realizar essa operação.</br>");

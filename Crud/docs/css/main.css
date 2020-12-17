@@ -9,10 +9,11 @@ body {
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+    margin-bottom: 50px;
 }
 
 .geral {
-    min-height: 84%;
+    /*min-height: 84%;*/
     color: white;
 }
 
@@ -55,5 +56,15 @@ body {
 
 .cardFormulario {
     background: rgba(0, 0, 0, 0.4);
-    margin-bottom: 15%;
 }
+
+.error{
+    color:red;
+}
+
+footer{
+    /*position:absolute;*/
+    bottom:0;
+    width: 100%;
+}
+
