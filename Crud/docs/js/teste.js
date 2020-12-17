@@ -25,7 +25,7 @@ $(document).ready(function () {
             },
             success: function (rs) {
                 // alert(rs)
-                $(rs).show().fadeOut(4000);
+                $(rs).show().fadeOut(3000);
                 $("#Email").val("");
                 $("#Username").val("");
                 $("#CPF").val("");
