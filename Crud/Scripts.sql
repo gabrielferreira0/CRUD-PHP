@@ -7,7 +7,8 @@ create table Users(
                       email varchar (50),
                       cpf varchar (50),
                       nascimento date,
-                      cidade varchar (50)
+                      cidade varchar (50),
+                      telefone varchar (50)
 );
 
 select * from users;

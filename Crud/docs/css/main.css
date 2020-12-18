@@ -41,7 +41,7 @@ body {
 }
 
 .arredondar {
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .destaque {
@@ -58,7 +58,7 @@ body {
 }
 
 .cardFormulario {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.2);
     /* margin-bottom: 15%; */
 }
 

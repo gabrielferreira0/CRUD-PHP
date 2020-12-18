@@ -1,6 +1,10 @@
 $(document).ready(function () {
     let CPF = $("#CPF");
     CPF.mask('999.999.999-99');
+
+    let telefone = $("#Telefone");
+    telefone.mask('(00) 0000-0000');
+
     $('#teste').on('click', '#cadastrar', function () {
         let username = $("#Username").val();
         let senha = $("#Senha").val();
@@ -8,6 +12,7 @@ $(document).ready(function () {
         let CPF = $("#CPF").val();
         let nascimento = $("#dt-nascimento").val();
         let cidade = $("#Cidade").val();
+        let telefone = $('#Telefone').val();
         let url = '../crud/class/index.php';
         $.ajax({
             type: "POST",
@@ -21,7 +26,8 @@ $(document).ready(function () {
                 Email: email,
                 CPF: CPF,
                 Nascimento: nascimento,
-                Cidade: cidade
+                Cidade: cidade,
+                Telefone : telefone,
             },
             success: function (rs) {
                 switch (rs) {
@@ -45,6 +51,7 @@ $(document).ready(function () {
                 $("#Senha").val("");
                 $("#Cidade").val("");
                 $("#dt-nascimento").val("");
+                $("#Telefone").val("");
             },
             error: function (e) {
                 bootbox.alert("<h2>Erro :(</h2><br/>Não foi possivel realizar essa operação.</br>");
