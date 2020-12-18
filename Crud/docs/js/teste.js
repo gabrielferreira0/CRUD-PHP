@@ -24,7 +24,20 @@ $(document).ready(function () {
                 Cidade: cidade
             },
             success: function (rs) {
-                 alert(rs)
+                // alert(rs)
+
+                switch (rs) {
+                    case 'nomeC':
+                        bootbox.alert("<h2>Erro :(</h2><br/>Nome já cadastrado!</br>");
+                        break;
+                    case 'emailC':
+                        bootbox.alert("<h2>Erro :(</h2><br/>Email já cadastrado!</br>");
+                        break;
+                    case 'cpfC':
+                        bootbox.alert("<h2>Erro :(</h2><br/>CPF já cadastrado!</br>");
+                        break;
+                }
+                // bootbox.alert(rs);
                 $(rs).show().fadeOut(3000);
                 $("#Email").val("");
                 $("#Username").val("");

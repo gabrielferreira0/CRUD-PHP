@@ -4,16 +4,26 @@ require_once 'Banco.php';
 
 class Cadastrar extends Banco
 {
-
-
-    public function validarUser($userName,$email,$CPF)
+    public function checkDB($userName, $email, $CPF)
     {
-        $sql = "select username,email,cpf from users where username ='{$userName}' or email = '{$email}' or cpf = '{$CPF}'" ;
+        $sql = "select email, username from users where username ='" . $userName . "'";
         $rs = pg_query($this->db, $sql);
         if (pg_num_rows($rs) > 0) {
-            echo 'usuário  já cadastrado!';
+            echo "nomeC";
         } else {
-            return true;
+            $sql = "select email, username from users where email = '" . $email . "'";
+            $rs = pg_query($this->db, $sql);
+            if (pg_num_rows($rs) > 0) {
+                echo 'emailC';
+            } else {
+                $sql = "select email, username from users where cpf ='" . $CPF . "'";
+                $rs = pg_query($this->db, $sql);
+                if (pg_num_rows($rs) > 0) {
+                    echo 'cpfC';
+                } else {
+                    return true;
+                }
+            }
         }
     }
 
@@ -31,7 +41,7 @@ class Cadastrar extends Banco
             echo '#alerta2';
             return;
         }
-        if ($this->validarUser($userName,$email,$CPF)) {
+        if ($this->checkDB($userName, $email, $CPF)) {
             $sql = "insert into Users(username,senha,email,cpf,nascimento,cidade) values ('$userName','$senha','$email','$CPF','$nascimento','$cidade');";
             $result = pg_query($this->db, $sql);
             if ($result) {

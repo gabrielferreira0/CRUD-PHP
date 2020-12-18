@@ -1,7 +1,7 @@
 <?php 
 
     Class Banco {
-        public $host = "127.0.0.1";
+        public $host = "localhost";
         public $port = "5432";
         public $dbname = "treinando";
         public $user = "postgres";
