@@ -24,7 +24,7 @@ $(document).ready(function () {
                 Cidade: cidade
             },
             success: function (rs) {
-                // alert(rs)
+                 alert(rs)
                 $(rs).show().fadeOut(3000);
                 $("#Email").val("");
                 $("#Username").val("");
