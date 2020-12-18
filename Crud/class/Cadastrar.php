@@ -38,7 +38,7 @@ class Cadastrar extends Banco
         $cidade = $_POST["Cidade"];
         // return date("d/m/Y", strtotime($nascimento));
         if ($userName == '' || $senha == '' || $email == '' || $CPF == '' || $nascimento == '' || $cidade == '') {
-            echo '#alerta2';
+            echo 'null';
             return;
         }
         if ($this->checkDB($userName, $email, $CPF)) {

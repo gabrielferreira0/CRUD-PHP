@@ -34,6 +34,9 @@ $(document).ready(function () {
                     case 'cpfC':
                         $("#alerta5").show().fadeOut(4000);
                         break;
+                    case 'null':
+                        $("#alerta6").show().fadeOut(4000);
+                        break;
                 }
                 $(rs).show().fadeOut(4000);
                 $("#Email").val("");
