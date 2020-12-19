@@ -20,7 +20,7 @@
 
 <div class="navbar  navbar-expand-sm  navbar-dark bg-dark mb-4 menu " role="navigation">
     <i class="fas fa-user-astronaut nasa"></i>
-    <a class="navbar-brand " href="#">Treinando</a>
+    <a class="navbar-brand arredondar " href="#">Treinando</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,13 +30,13 @@
 
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="" target="_blank">Contato</a>
+                <a class="nav-link arredondar" href="" target="_blank">Contato</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="" target="_blank">Sobre Nós</a>
+                <a class="nav-link arredondar" href="" target="_blank">Sobre Nós</a>
             </li>
         </ul>
-        <div class="d-flex align-items-center">
+        <div class="d-flex justify-content-center">
             <a class="nav-link  text-center loginInput" href="">Login</a>
             <a class="nav-link text-center destaque" href="#">Cadastrar</a>
         </div>
@@ -52,7 +52,7 @@
     <div class="d-flex justify-content-center geral">
         <div class="card cardFormulario">
             <div class="card-body">
-                <h3 class="fas fa-address-card  text-center titulo"> Cadastro </h3>
+                <h3 class="fas fa-address-card titulo"> Cadastro </h3>
                 <form id="formulario" class="formulario" data-toggle="validator">
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -119,16 +119,49 @@
                     <div class="form-row">
                         <div class="form-group col-xl-6">
                             <label for="Cidade">Cidade:</label>
-                            <div class="input-group">
+                            <div class="input-group ">
+
                                 <div class="input-group-prepend">
                                     <span class="input-group-text arredondar"> <i class="fas fa-city"></i></span>
                                 </div>
-                                <input type="text" class="form-control arredondar" id="Cidade"
+
+                                <input type="text" class="form-control" id="Cidade"
                                        placeholder="Brasilia-DF" required>
+                                <div class="input-group-append">
+                                        <select class="form-control " id="exampleFormControlSelect1" required>
+                                            <option value="estado">UF</option>
+                                            <option value="AC">AC</option>
+                                            <option value="AL">AL</option>
+                                            <option value="AP">AP</option>
+                                            <option value="AM">AM</option>
+                                            <option value="BA">BA</option>
+                                            <option value="CE">CE</option>
+                                            <option value="DF">DF</option>
+                                            <option value="ES">ES</option>
+                                            <option value="GO">GO</option>
+                                            <option value="MA">MA</option>
+                                            <option value="MT">MT</option>
+                                            <option value="MS">MS</option>
+                                            <option value="MG">MG</option>
+                                            <option value="PA">PA</option>
+                                            <option value="PB">PB</option>
+                                            <option value="PR">PR</option>
+                                            <option value="PE">PE</option>
+                                            <option value="PI">PI</option>
+                                            <option value="RJ">RJ</option>
+                                            <option value="RN">RN</option>
+                                            <option value="RS">RS</option>
+                                            <option value="RO">RO</option>
+                                            <option value="RR">RR</option>
+                                            <option value="SC">SC</option>
+                                            <option value="SP">SP</option>
+                                            <option value="SE">SE</option>
+                                            <option value="TO">TO</option>
+                                        </select>
+                                </div>
                             </div>
                             <div class="error help-block with-errors"></div>
                         </div>
-
                         <div class="form-group col-xl-6">
                             <label for="Telefone">Telefone:</label>
                             <div class="input-group">
@@ -140,31 +173,37 @@
                             </div>
                             <div class="error help-block with-errors"></div>
                         </div>
-
-
                     </div>
-                    <div class="form-group" style="display: flex; justify-content: flex-end;">
-                        <button id="cadastrar" type="button" class="btn btn-success arredondar">Cadastrar</button>
+                    <div class="form-group" style="display: flex; justify-content:flex-end;">
+                        <button id="cadastrar" type="button" class="btn btn-success">Cadastrar</button>
                     </div>
-                    <div class="alert alert-success testando text-center" id="alerta" role="alert" style="display: none;">
+                    <div class="alert alert-danger testando text-center" id="alerta6" role="alert"
+                         style="display: none; justify-content: flex-start;">
+                        <strong>Erro! </strong> Preencha <strong> todos os campos!</strong>
+                    </div>
+
+                    <div class="alert alert-success testando text-center" id="alerta" role="alert"
+                         style="display: none;">
                         <strong>Successo!</strong> você realizou seu <strong>Cadastro!</strong>
                     </div>
-                    <div class="alert alert-danger testando text-center" id="alerta2" role="alert" style="display: none;">
+                    <div class="alert alert-danger testando text-center" id="alerta2" role="alert"
+                         style="display: none;">
                         <strong>Erro! </strong> Seu cadastro <strong>não foi realizado!</strong>
                     </div>
-                    <div class="alert alert-danger testando text-center" id="alerta3" role="alert" style="display: none;">
+                    <div class="alert alert-danger testando text-center" id="alerta3" role="alert"
+                         style="display: none;">
                         <strong>Erro! </strong> Username <strong>já cadastrado!</strong>
                     </div>
-                    <div class="alert alert-danger testando text-center" id="alerta4" role="alert" style="display: none;">
+                    <div class="alert alert-danger testando text-center" id="alerta4" role="alert"
+                         style="display: none;">
                         <strong>Erro! </strong> Email <strong>já cadastrado!</strong>
                     </div>
-                    <div class="alert alert-danger testando text-center" id="alerta5" role="alert" style="display: none;">
+                    <div class="alert alert-danger testando text-center" id="alerta5" role="alert"
+                         style="display: none;">
                         <strong>Erro! </strong> CPF <strong>já cadastrado!</strong>
                     </div>
-                    <div class="alert alert-danger testando text-center" id="alerta6" role="alert" style="display: none;">
-                        <strong>Erro! </strong> Preencha  <strong> todos os campos!</strong>
-                    </div>
                 </form>
+
             </div>
         </div>
     </div>
@@ -178,6 +217,5 @@
     </div>
     <!-- Copyright -->
 </footer>
-
 <!-- Footer -->
 </body>
