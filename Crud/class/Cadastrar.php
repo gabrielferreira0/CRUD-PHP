@@ -72,7 +72,7 @@ class Cadastrar extends Banco
 
         if ($UF == '' || $userName == '' || $senha == '' || $email == '' || $CPF == '' || $nascimento == '' || $cidade == ''|| $telefone == '' ) {
             echo 'null';
-            return;
+            return false;
         }
 
         if ($this->checkDB($userName, $email, $CPF)  && $this->validarCPF($CPF)) {

@@ -32,14 +32,15 @@ $(document).ready(function () {
                 UF: UF,
             },
             success: function (rs) {
-                // alert(rs)
+                alert(rs)
                 switch (rs) {
                     case 'nomeC':
                         $("#alerta3").show().fadeOut(4000);
                         break;
                     case 'emailC':
                         $("#alerta4").show().fadeOut(4000);
-                        break;s
+                        break;
+                        s
                     case 'cpfC':
                         $("#alerta5").show().fadeOut(4000);
                         break;
@@ -49,16 +50,19 @@ $(document).ready(function () {
                     case 'CPFinvalido':
                         $("#alerta7").show().fadeOut(4000);
                         break;
+                    case '#alerta':
+                        $(rs).show().fadeOut(4000);
+                        $("#Email").val("");
+                        $("#Username").val("");
+                        $("#CPF").val("");
+                        $("#Senha").val("");
+                        $("#Cidade").val("");
+                        $("#dt-nascimento").val("");
+                        $("#Telefone").val("");
+                        $("#UF").val("UF");
+                        break;
                 }
-                $(rs).show().fadeOut(4000);
-                $("#Email").val("");
-                $("#Username").val("");
-                $("#CPF").val("");
-                $("#Senha").val("");
-                $("#Cidade").val("");
-                $("#dt-nascimento").val("");
-                $("#Telefone").val("");
-                $("#UF").val("UF");
+
             },
             error: function (e) {
                 bootbox.alert("<h2>Erro :(</h2><br/>Não foi possivel realizar essa operação.</br>");
