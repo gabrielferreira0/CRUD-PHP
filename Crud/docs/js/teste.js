@@ -5,7 +5,12 @@ $(document).ready(function () {
     let telefone = $("#Telefone");
     telefone.mask('(00) 0000-0000');
 
-    $('#teste').on('click', '#cadastrar', function () {
+    $('#Conteudo').on('click', '#Login', function () {
+
+    });
+
+
+    $('#Conteudo').on('click', '#cadastrar', function () {
         let username = $("#Username").val();
         let senha = $("#Senha").val();
         let email = $("#Email").val();
@@ -32,7 +37,7 @@ $(document).ready(function () {
                 UF: UF,
             },
             success: function (rs) {
-                // alert(rs)
+                alert(rs)
                 switch (rs) {
                     case 'nomeC':
                         $("#alerta3").show().fadeOut(4000);

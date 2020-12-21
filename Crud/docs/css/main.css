@@ -72,3 +72,27 @@ footer{
     bottom:0;
     width: 100%;
 }
+
+
+    .login-card-footer-text {
+        font-size: 16px;
+        color: lightgray; }
+
+ .login-btn:hover {
+    border: 1px solid #000;
+    background-color: #4faddb;
+    color: white; }
+
+.login-btn {
+    background: #343a40;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #fff;
+    margin-bottom: 24px; }
+
+.login-card-footer-text:hover {
+
+    color:#f50a31;
+}

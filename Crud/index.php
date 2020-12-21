@@ -16,7 +16,7 @@
     <script src="docs/plugins/bootstrap-4.1.3-dist/js/validator.min.js"></script>
 </head>
 
-<body id="teste">
+<body id="Conteudo">
 
 <div class="navbar  navbar-expand-sm  navbar-dark bg-dark mb-4 menu " role="navigation">
     <i class="fas fa-user-astronaut nasa"></i>
@@ -37,8 +37,8 @@
             </li>
         </ul>
         <div class="d-flex justify-content-center">
-            <a class="nav-link  text-center loginInput" href="">Login</a>
-            <a class="nav-link text-center destaque" href="#">Cadastrar</a>
+            <a class="nav-link  text-center loginInput" id='Login'href="">Login</a>
+            <a class="nav-link text-center destaque" id='Registrar'href="#">Cadastrar</a>
         </div>
         <div class="d-flex align-items-center ">
             <input class="form-control mr-sm-2 " type="text" placeholder="Pesquisar" aria-label="Search">

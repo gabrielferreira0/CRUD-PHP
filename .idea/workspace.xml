@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d94d50bb-87d8-4e3a-b914-62990f1c16ff" name="Default Changelist" comment="" />
+    <list default="true" id="89052a77-4f2e-4b04-a8e8-5b250d94b3ac" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,48 +10,32 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1lVtQ6L65x9EEyMHW6FghYTWdCh" />
+  <component name="ProjectId" id="1lz0Spx81LTW1UOPskpi0QcCieu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d94d50bb-87d8-4e3a-b914-62990f1c16ff" name="Default Changelist" comment="" />
-      <created>1607694067766</created>
+      <changelist id="89052a77-4f2e-4b04-a8e8-5b250d94b3ac" name="Default Changelist" comment="" />
+      <created>1608584640153</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1607694067766</updated>
-      <workItem from="1607694069293" duration="5481000" />
-      <workItem from="1607703373199" duration="6660000" />
-      <workItem from="1607710637825" duration="2402000" />
-      <workItem from="1607951159110" duration="18092000" />
-      <workItem from="1608037392792" duration="341000" />
-      <workItem from="1608242615083" duration="2046000" />
-      <workItem from="1608331405005" duration="3337000" />
-      <workItem from="1608392300033" duration="5973000" />
-      <workItem from="1608556293683" duration="1926000" />
-      <workItem from="1608561855944" duration="4164000" />
-      <workItem from="1608571762022" duration="699000" />
+      <updated>1608584640153</updated>
+      <workItem from="1608584650109" duration="730000" />
+      <workItem from="1608585888927" duration="790000" />
     </task>
     <servers />
   </component>
