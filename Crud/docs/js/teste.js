@@ -32,7 +32,7 @@ $(document).ready(function () {
                 UF: UF,
             },
             success: function (rs) {
-                alert(rs)
+                // alert(rs)
                 switch (rs) {
                     case 'nomeC':
                         $("#alerta3").show().fadeOut(4000);

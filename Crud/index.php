@@ -177,8 +177,6 @@
                     <div class="form-group" style="display: flex; justify-content:flex-end;">
                         <button id="cadastrar" type="button" class="btn btn-success">Cadastrar</button>
                     </div>
-
-
                     <div class="alert alert-success testando text-center" id="alerta" role="alert"
                          style="display: none;">
                         <strong>Successo!</strong> você realizou seu <strong>Cadastro!</strong>
@@ -202,7 +200,7 @@
 
                     <div class="alert alert-danger testando text-center" id="alerta6" role="alert"
                          style="display: none; justify-content: flex-start;">
-                        <i class="fas fa-exclamation-triangle"></i><strong>Erro!  </strong> Preencha <strong> todos os campos!</strong>
+                         <strong>Erro!  </strong> Preencha <strong> todos os campos! </strong>
                     </div>
 
                     <div class="alert alert-danger testando text-center" id="alerta7" role="alert"
