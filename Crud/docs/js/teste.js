@@ -32,6 +32,7 @@ $(document).ready(function () {
                 UF: UF,
             },
             success: function (rs) {
+                // alert(rs)
                 switch (rs) {
                     case 'nomeC':
                         $("#alerta3").show().fadeOut(4000);
@@ -44,6 +45,9 @@ $(document).ready(function () {
                         break;
                     case 'null':
                         $("#alerta6").show().fadeOut(4000);
+                        break;
+                    case 'CPFinvalido':
+                        $("#alerta7").show().fadeOut(4000);
                         break;
                 }
                 $(rs).show().fadeOut(4000);
