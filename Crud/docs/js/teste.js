@@ -13,6 +13,7 @@ $(document).ready(function () {
         let nascimento = $("#dt-nascimento").val();
         let cidade = $("#Cidade").val();
         let telefone = $('#Telefone').val();
+        let UF = $("#UF option:selected").val();
         let url = '../crud/class/index.php';
         $.ajax({
             type: "POST",
@@ -27,7 +28,8 @@ $(document).ready(function () {
                 CPF: CPF,
                 Nascimento: nascimento,
                 Cidade: cidade,
-                Telefone : telefone,
+                Telefone: telefone,
+                UF: UF,
             },
             success: function (rs) {
                 switch (rs) {
@@ -36,7 +38,7 @@ $(document).ready(function () {
                         break;
                     case 'emailC':
                         $("#alerta4").show().fadeOut(4000);
-                        break;
+                        break;s
                     case 'cpfC':
                         $("#alerta5").show().fadeOut(4000);
                         break;
@@ -52,6 +54,7 @@ $(document).ready(function () {
                 $("#Cidade").val("");
                 $("#dt-nascimento").val("");
                 $("#Telefone").val("");
+                $("#UF").val("UF");
             },
             error: function (e) {
                 bootbox.alert("<h2>Erro :(</h2><br/>Não foi possivel realizar essa operação.</br>");

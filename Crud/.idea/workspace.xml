@@ -23,7 +23,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lixo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -38,7 +38,8 @@
       <workItem from="1608044470602" duration="10546000" />
       <workItem from="1608212043081" duration="10716000" />
       <workItem from="1608228561238" duration="396000" />
-      <workItem from="1608297174210" duration="17860000" />
+      <workItem from="1608297174210" duration="18512000" />
+      <workItem from="1608556092184" duration="200000" />
     </task>
     <servers />
   </component>

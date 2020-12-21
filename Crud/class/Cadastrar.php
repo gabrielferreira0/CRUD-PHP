@@ -36,14 +36,15 @@ class Cadastrar extends Banco
         $nascimento = $_POST["Nascimento"];
         $cidade = $_POST["Cidade"];
         $telefone = $_POST["Telefone"];
+        $UF = $_POST["UF"];
 
         // return date("d/m/Y", strtotime($nascimento));
-        if ($userName == '' || $senha == '' || $email == '' || $CPF == '' || $nascimento == '' || $cidade == ''|| $telefone == '' ) {
+        if ($UF == '' || $userName == '' || $senha == '' || $email == '' || $CPF == '' || $nascimento == '' || $cidade == ''|| $telefone == '' ) {
             echo 'null';
             return;
         }
         if ($this->checkDB($userName, $email, $CPF)) {
-            $sql = "insert into Users(username,senha,email,cpf,nascimento,cidade,telefone) values ('$userName','$senha','$email','$CPF','$nascimento','$cidade','$telefone');";
+            $sql = "insert into Users(username,senha,email,cpf,nascimento,cidade,telefone,UF) values ('$userName','$senha','$email','$CPF','$nascimento','$cidade','$telefone','$UF');";
             $result = pg_query($this->db, $sql);
             if ($result) {
                 echo '#alerta';
