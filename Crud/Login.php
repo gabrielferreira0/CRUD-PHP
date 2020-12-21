@@ -82,7 +82,7 @@
                         </div>
                     </div>
             </div>
-            <button id="cadastrar" type="button" class="login-btn btn btn-dark arredondar">Login</button>
+            <button id="Logar" type="button" class="login-btn btn btn-dark arredondar">Login</button>
             <a href="#!" class="login-card-footer-text">Esqueceu a senha?</a>
             <p class="login-card-footer-text">Não possui uma conta? <a href="#!" class="login-card-footer-text">Register
                     aqui</a></p>
