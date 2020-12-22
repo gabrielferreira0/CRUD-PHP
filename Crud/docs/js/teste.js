@@ -7,9 +7,6 @@ $(document).ready(function () {
 
 
 
-
-
-
     $('#Conteudo').on('click', '#Login', function () {
         let loginHTML = '\ <div class="card cardFormulario col-md-3">\
             <div class="card-body" id="card-body">\
@@ -22,7 +19,7 @@ $(document).ready(function () {
                                 <div class="input-group-prepend">\
                                     <span class="input-group-text arredondar"> <i class="fas fa-id-card-alt"></i></span>\
                                 </div>\
-                                <input type="text" class="form-control arredondar" id="CPF" placeholder="123.123.123-00"\
+                                <input type="text" class="form-control arredondar" id="CPF-login" placeholder="123.123.123-00"\
                                        max="11" data-error="Por favor, informe um CPF correto." required>\
                             </div>\
                             <div class="error help-block with-errors"></div>\
@@ -50,6 +47,8 @@ $(document).ready(function () {
         </div>';
         $('.cardFormulario').remove();
         $('.nhanhanha').append(loginHTML);
+        let CPF = $("#CPF-login");
+        CPF.mask('999.999.999-99');
     });
 
     // $('#Conteudo').on('click', '#Registrar', function () {
