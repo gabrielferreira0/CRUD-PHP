@@ -8,7 +8,7 @@ $(document).ready(function () {
     $('#Conteudo').on('click', '#Login', function () {
         let loginHTML = '\ <div class="card cardFormulario col-md-3">\
             <div class="card-body" id="card-body">\
-                <h3 class="fas fa-users titulo"> Login </h3>\
+                <h3 class="text-center titulo"> Login  <i class="fas fa-users"></i></h3> \
                 <form id="formulario" class="formulario" data-toggle="validator">\
                     <div class="form-row">\
                         <div class="form-group col-md-12">\
@@ -55,7 +55,7 @@ $(document).ready(function () {
         let cadastroHTML = '\ <div class="card cardFormulario">\n' +
             '<!--            inicia aqui-->\n' +
             '            <div class="card-body">\n' +
-            '                <h3 class="fas fa-address-card titulo"> Cadastro </h3>\n' +
+            '                <h3 class="text-center titulo"> Cadastro  <i class="fas fa-address-card"></i></h3>\n' +
             '                <form id="formulario" class="formulario" data-toggle="validator">\n' +
             '                    <div class="form-row">\n' +
             '                        <div class="form-group col-md-6">\n' +

@@ -53,7 +53,7 @@
         <div class="card cardFormulario">
 <!--            inicia aqui-->
             <div class="card-body">
-                <h3 class="fas fa-address-card titulo"> Cadastro </h3>
+                <h3 class="text-center titulo"> Cadastro  <i class="fas fa-address-card"></i></h3>
                 <form id="formulario" class="formulario" data-toggle="validator">
                     <div class="form-row">
                         <div class="form-group col-md-6">
