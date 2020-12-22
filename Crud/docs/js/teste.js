@@ -6,7 +6,12 @@ $(document).ready(function () {
     telefone.mask('(00) 0000-0000');
 
 
-    let loginHTML = '\ <div class="card cardFormulario col-md-3">\
+
+
+
+
+    $('#Conteudo').on('click', '#Login', function () {
+        let loginHTML = '\ <div class="card cardFormulario col-md-3">\
             <div class="card-body" id="card-body">\
                 <h3 class="fas fa-users titulo"> Login </h3>\
                 <form id="formulario" class="formulario" data-toggle="validator">\
@@ -43,11 +48,6 @@ $(document).ready(function () {
             <p class="login-card-footer-text">Não possui uma conta? <a href="index.php" class="login-card-footer-text">Cadastrar-se\
                     aqui</a></p>\
         </div>';
-
-
-
-    $('#Conteudo').on('click', '#Login', function () {
-        // $('.card-body').append('TESTE TESTE TESTE');
         $('.cardFormulario').remove();
         $('.nhanhanha').append(loginHTML);
     });

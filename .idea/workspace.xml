@@ -36,23 +36,11 @@
       <updated>1608584640153</updated>
       <workItem from="1608584650109" duration="730000" />
       <workItem from="1608585888927" duration="790000" />
-      <workItem from="1608642328465" duration="8541000" />
+      <workItem from="1608642328465" duration="8671000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/Crud/docs/js/teste.js</url>
-          <line>26</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

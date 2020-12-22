@@ -49,11 +49,8 @@
     </div>
 </div>
 <div class="container-fluid ">
-
     <div class="d-flex justify-content-center geral nhanhanha" >
-
         <div class="card cardFormulario">
-
             <div class="card-body">
                 <h3 class="fas fa-address-card titulo"> Cadastro </h3>
                 <form id="formulario" class="formulario" data-toggle="validator">
