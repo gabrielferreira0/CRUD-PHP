@@ -49,7 +49,7 @@
 
 
 <div class="container-fluid ">
-    <div class="d-flex justify-content-center geral">
+    <div class="d-flex justify-content-center geral" >
         <div class="card cardFormulario">
             <div class="card-body">
                 <h3 class="fas fa-address-card titulo"> Cadastro </h3>
@@ -174,9 +174,11 @@
                             <div class="error help-block with-errors"></div>
                         </div>
                     </div>
+
                     <div class="form-group" style="display: flex; justify-content:flex-end;">
                         <button id="cadastrar" type="button" class="btn btn-success">Cadastrar</button>
                     </div>
+
                     <div class="alert alert-success testando text-center" id="alerta" role="alert"
                          style="display: none;">
                         <strong>Successo!</strong> você realizou seu <strong>Cadastro!</strong>

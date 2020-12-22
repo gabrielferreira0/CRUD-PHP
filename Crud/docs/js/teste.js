@@ -5,7 +5,18 @@ $(document).ready(function () {
     let telefone = $("#Telefone");
     telefone.mask('(00) 0000-0000');
 
+
+    let loginHTML = '\ <div class="alert alert-primary alert-dismissible fade show" role="alert">\
+                        <strong>TESTE 123456789</strong>\
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">\
+                          <span aria-hidden="true">&times;</span>\
+                        </button>\
+                      </div> ';
+
+
+
     $('#Conteudo').on('click', '#Login', function () {
+        ('.cardLogin').s
 
     });
 

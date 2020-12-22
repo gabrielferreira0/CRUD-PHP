@@ -51,8 +51,11 @@
 <div class="container-fluid ">
 
     <div class="d-flex justify-content-center geral">
-        <div class="card cardFormulario">
-            <div class="card-body">
+
+        <div class="card cardFormulario col-md-3">
+
+            <div class="card-body" id="card-body">
+
                 <h3 class="fas fa-users titulo"> Login </h3>
                 <form id="formulario" class="formulario" data-toggle="validator">
                     <div class="form-row">
@@ -82,11 +85,14 @@
                         </div>
                     </div>
             </div>
-            <button id="Logar" type="button" class="login-btn btn btn-dark arredondar">Login</button>
+
+
+            <button id="Logar" type="button" class="Entrar btn btn btn arredondar">Login</button>
             <a href="#!" class="login-card-footer-text">Esqueceu a senha?</a>
-            <p class="login-card-footer-text">Não possui uma conta? <a href="#!" class="login-card-footer-text">Register
+            <p class="login-card-footer-text">Não possui uma conta? <a href="index.php" class="login-card-footer-text">Cadastrar-se
                     aqui</a></p>
         </div>
+
     </div>
 </div>
 <!-- Footer -->
