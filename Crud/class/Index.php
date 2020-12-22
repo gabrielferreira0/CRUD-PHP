@@ -10,6 +10,7 @@ if (isset($_POST["rq"])) {
             $loadClass = new Cadastrar();
             echo $loadClass->setUser();
             break;
+
     }
 }
 

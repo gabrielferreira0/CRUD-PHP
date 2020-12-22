@@ -36,21 +36,24 @@
                 <a class="nav-link arredondar" href="" target="_blank">Sobre Nós</a>
             </li>
         </ul>
+
         <div class="d-flex justify-content-center">
-            <a class="nav-link  text-center loginInput" id='Login'href="">Login</a>
-            <a class="nav-link text-center destaque" id='Registrar'href="#">Cadastrar</a>
+            <a class="nav-link  text-center loginInput" id='Login' href="#!" >Login</a>
+            <a class="nav-link text-center Registrar" id='Registrar'href="#!">Cadastrar</a>
         </div>
+
         <div class="d-flex align-items-center ">
             <input class="form-control mr-sm-2 " type="text" placeholder="Pesquisar" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
         </div>
     </div>
 </div>
-
-
 <div class="container-fluid ">
-    <div class="d-flex justify-content-center geral" >
+
+    <div class="d-flex justify-content-center geral nhanhanha" >
+
         <div class="card cardFormulario">
+
             <div class="card-body">
                 <h3 class="fas fa-address-card titulo"> Cadastro </h3>
                 <form id="formulario" class="formulario" data-toggle="validator">
@@ -217,7 +220,6 @@
     </div>
 </div>
 <!-- Footer -->
-
 <footer class="bg-dark ">
     <!-- Copyright -->
     <div style="color:aliceblue;" class="footer-copyright text-center py-3">© 2020 desenvolvido por:

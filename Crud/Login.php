@@ -52,6 +52,8 @@
 
     <div class="d-flex justify-content-center geral">
 
+<!--        inicia aqui-->
+
         <div class="card cardFormulario col-md-3">
 
             <div class="card-body" id="card-body">
@@ -84,6 +86,7 @@
                             <div class="error help-block with-errors"></div>
                         </div>
                     </div>
+                    </form>
             </div>
 
 
@@ -92,6 +95,8 @@
             <p class="login-card-footer-text">Não possui uma conta? <a href="index.php" class="login-card-footer-text">Cadastrar-se
                     aqui</a></p>
         </div>
+
+<!--        termina aqui-->
 
     </div>
 </div>

@@ -44,7 +44,7 @@ body {
     border-radius: 10px;
 }
 
-.destaque {
+.Registrar {
     background: #f50a31;
     color: #fff;
     border-radius: 15px;
@@ -52,9 +52,9 @@ body {
 }
 
 .loginInput {
-    color: #fff;
     border-radius: 15px;
     margin: 8px;
+    color: #fff;
 }
 
 .cardFormulario {

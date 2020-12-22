@@ -6,19 +6,56 @@ $(document).ready(function () {
     telefone.mask('(00) 0000-0000');
 
 
-    let loginHTML = '\ <div class="alert alert-primary alert-dismissible fade show" role="alert">\
-                        <strong>TESTE 123456789</strong>\
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">\
-                          <span aria-hidden="true">&times;</span>\
-                        </button>\
-                      </div> ';
+    let loginHTML = '\ <div class="card cardFormulario col-md-3">\
+            <div class="card-body" id="card-body">\
+                <h3 class="fas fa-users titulo"> Login </h3>\
+                <form id="formulario" class="formulario" data-toggle="validator">\
+                    <div class="form-row">\
+                        <div class="form-group col-md-12">\
+                            <label for="CPF">CPF:</label>\
+                            <div class="input-group">\
+                                <div class="input-group-prepend">\
+                                    <span class="input-group-text arredondar"> <i class="fas fa-id-card-alt"></i></span>\
+                                </div>\
+                                <input type="text" class="form-control arredondar" id="CPF" placeholder="123.123.123-00"\
+                                       max="11" data-error="Por favor, informe um CPF correto." required>\
+                            </div>\
+                            <div class="error help-block with-errors"></div>\
+                        </div>\
+                    </div>\
+                    <div class="form-row">\
+                        <div class="form-group col-md-12">\
+                            <label for="Senha">Senha:</label>\
+                            <div class="input-group">\
+                                <div class="input-group-prepend">\
+                                    <span class="input-group-text arredondar"> <i class="fas fa-lock"></i></span>\
+                                </div>\
+                                <input type="password" class="form-control arredondar" id="Senha" placeholder="Senha"\
+                                       required>\
+                            </div>\
+                            <div class="error help-block with-errors"></div>\
+                        </div>\
+                    </div>\
+                    </form>\
+            </div>\
+            <button id="Logar" type="button" class="Entrar btn btn btn arredondar">Login</button>\
+            <a href="#!" class="login-card-footer-text">Esqueceu a senha?</a>\
+            <p class="login-card-footer-text">Não possui uma conta? <a href="index.php" class="login-card-footer-text">Cadastrar-se\
+                    aqui</a></p>\
+        </div>';
 
 
 
     $('#Conteudo').on('click', '#Login', function () {
-        ('.cardLogin').s
-
+        // $('.card-body').append('TESTE TESTE TESTE');
+        $('.cardFormulario').remove();
+        $('.nhanhanha').append(loginHTML);
     });
+
+    // $('#Conteudo').on('click', '#Registrar', function () {
+    //     // $('.card-body').append('TESTE TESTE TESTE');
+    //     $('.cardFormulario').remove();
+    // });
 
 
     $('#Conteudo').on('click', '#cadastrar', function () {
