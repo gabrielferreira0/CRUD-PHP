@@ -38,8 +38,8 @@
         </ul>
 
         <div class="d-flex justify-content-center">
-            <a class="nav-link  text-center loginInput" id='Login' href="#!" >Login</a>
-            <a class="nav-link text-center Registrar" id='Registrar'href="#!">Cadastrar</a>
+            <a class="nav-link  text-center loginInput" id='Login'>Login</a>
+            <a class="nav-link text-center Registrar" id='Registrar'>Cadastrar</a>
         </div>
 
         <div class="d-flex align-items-center ">
@@ -49,8 +49,9 @@
     </div>
 </div>
 <div class="container-fluid ">
-    <div class="d-flex justify-content-center geral nhanhanha" >
+    <div class="d-flex justify-content-center geral" >
         <div class="card cardFormulario">
+<!--            inicia aqui-->
             <div class="card-body">
                 <h3 class="fas fa-address-card titulo"> Cadastro </h3>
                 <form id="formulario" class="formulario" data-toggle="validator">
@@ -73,7 +74,7 @@
                                     <span class="input-group-text arredondar"> <i class="fas fa-lock"></i></span>
                                 </div>
                                 <input type="password" class="form-control arredondar" id="Senha" placeholder="Senha"
-                                       required>
+                                       maxlength="10" required>
                             </div>
                             <div class="error help-block with-errors"></div>
                         </div>
@@ -98,7 +99,7 @@
                                     <span class="input-group-text arredondar"> <i class="fas fa-id-card-alt"></i></span>
                                 </div>
                                 <input type="text" class="form-control arredondar" id="CPF" placeholder="123.123.123-00"
-                                       max="11" data-error="Por favor, informe um CPF correto." required>
+                                       data-error="Por favor, informe um CPF correto." required>
                             </div>
                             <div class="error help-block with-errors"></div>
                         </div>
@@ -213,6 +214,8 @@
                 </form>
 
             </div>
+
+<!--            termina aqui-->
         </div>
     </div>
 </div>
