@@ -30,8 +30,8 @@ $(document).ready(function () {
                                 <div class="input-group-prepend">\
                                     <span class="input-group-text arredondar"> <i class="fas fa-lock"></i></span>\
                                 </div>\
-                                <input type="password" class="form-control arredondar" id="Senha" placeholder="Senha"\
-                                         maxlength="10" required>\
+                                <input type="password" class="form-control arredondar" id="senha-login" placeholder="Senha"\
+                                         maxlength="20" required>\
                             </div>\
                             <div class="error help-block with-errors"></div>\
                         </div>\
@@ -43,8 +43,8 @@ $(document).ready(function () {
             <p class="login-card-footer-text">Não possui uma conta? <a href="index.php" class="login-card-footer-text">Cadastrar-se\
                     aqui</a></p>\
         </div>';
-        $('.cardFormulario').remove();
-        $('.geral').append(loginHTML);
+        // $('.cardFormulario').remove();
+        $('.geral').html(loginHTML);
         let CPF = $("#CPF-login");
         CPF.mask('999.999.999-99');
     });
@@ -219,9 +219,8 @@ $(document).ready(function () {
             '\n' +
             '<!--            termina aqui-->\n' +
             '        </div> ';
-        $('.cardFormulario').remove();
-        $('.geral').append(cadastroHTML);
-
+        // $('.cardFormulario').remove();
+        $('.geral').html(cadastroHTML);
         let CPF = $("#CPF");
         CPF.mask('999.999.999-99');
         let telefone = $("#Telefone");
@@ -230,9 +229,44 @@ $(document).ready(function () {
 
 
     $('#Conteudo').on('click', '#Logar', function () {
-        alert('Falta fazer o back-end do login')
-    });
 
+        let CPF_login = $('#CPF-login').val();
+        let senha_login = $('#senha-login').val();
+        let url = '../crud/class/index.php';
+        $.ajax({
+            type: "POST",
+            dataType: 'text',
+            url: url,
+            async: true,
+            data: {
+                rq: 'login',
+                CPF_login: CPF_login,
+                senha_login: senha_login,
+            },
+            success: function (rs) {
+                switch (rs) {
+                    case 'dados_invalidos':
+                        Swal.fire({
+                            position: 'center',
+                            icon: 'error',
+                            title: 'Dados invalidos!',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                        break;
+                    case 'null':
+                        $("#alerta6").show().fadeOut(4000);
+                        break;
+                    default :
+                        alert(rs);
+                }
+            },
+            error: function (e) {
+                bootbox.alert("<h2>Erro :(</h2><br/>Não foi possivel realizar essa operação.</br>");
+            }
+        });
+
+    });
 
     $('#Conteudo').on('click', '#cadastrar', function () {
         let username = $("#Username").val();
@@ -261,7 +295,6 @@ $(document).ready(function () {
                 UF: UF,
             },
             success: function (rs) {
-                // alert(rs)
                 switch (rs) {
                     case 'nomeC':
                         $("#alerta3").show().fadeOut(4000);
@@ -280,7 +313,13 @@ $(document).ready(function () {
                         $("#alerta7").show().fadeOut(4000);
                         break;
                     case '#alerta':
-                        $(rs).show().fadeOut(4000);
+                        Swal.fire({
+                            position: 'center',
+                            icon: 'success',
+                            title: 'Cadastro realizado com sucesso!',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
                         $("#Email").val("");
                         $("#Username").val("");
                         $("#CPF").val("");

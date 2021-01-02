@@ -10,6 +10,7 @@
     <script src="docs/plugins/bootstrap-4.1.3-dist/js/popper.min.js"></script>
     <script src="docs/plugins/jquery/jquery.mask.js"></script>
     <script src="docs/plugins/bootbox/bootbox.all.min.js"></script>
+    <script src="docs/plugins/sweetalert/sweetalert2.all.min.js"></script>
     <script src="docs/js/teste.js"></script>
     <link rel="stylesheet" href="docs/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
@@ -74,7 +75,7 @@
                                     <span class="input-group-text arredondar"> <i class="fas fa-lock"></i></span>
                                 </div>
                                 <input type="password" class="form-control arredondar" id="Senha" placeholder="Senha"
-                                       maxlength="10" required>
+                                       maxlength="20" required>
                             </div>
                             <div class="error help-block with-errors"></div>
                         </div>
@@ -180,10 +181,6 @@
                         <button id="cadastrar" type="button" class="btn btn-success">Cadastrar</button>
                     </div>
 
-                    <div class="alert alert-success testando text-center" id="alerta" role="alert"
-                         style="display: none;">
-                        <strong>Successo!</strong> você realizou seu <strong>Cadastro!</strong>
-                    </div>
                     <div class="alert alert-danger testando text-center" id="alerta2" role="alert"
                          style="display: none;">
                         <strong>Erro! </strong> Seu cadastro <strong>não foi realizado!</strong>
