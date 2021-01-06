@@ -41,7 +41,10 @@
       <workItem from="1608656382290" duration="252000" />
       <workItem from="1609024465383" duration="398000" />
       <workItem from="1609201644394" duration="701000" />
-      <workItem from="1609594254531" duration="6939000" />
+      <workItem from="1609594254531" duration="7174000" />
+      <workItem from="1609621761765" duration="142000" />
+      <workItem from="1609879615720" duration="8776000" />
+      <workItem from="1609889236642" duration="5566000" />
     </task>
     <servers />
   </component>
@@ -55,15 +58,9 @@
           <url>file://$PROJECT_DIR$/Crud/class/Index.php</url>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/Crud/class/Login.php</url>
-          <line>2</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Crud/docs/js/teste.js</url>
           <line>7</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

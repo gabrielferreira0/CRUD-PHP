@@ -1,3 +1,8 @@
+<?php
+session_start();
+include ('class/verificar_login.php')
+?>
+
 <head>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -18,49 +23,37 @@
 </head>
 
 <body id="Conteudo">
-
 <div class="navbar  navbar-expand-sm  navbar-dark bg-dark mb-4 menu " role="navigation">
     <i class="fas fa-user-astronaut nasa"></i>
-    <a class="navbar-brand arredondar " href="">Treinando</a>
+    <a class="navbar-brand arredondar " href="index.php">Treinando </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse menu" id="navbarCollapse">
-
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link arredondar" href="" target="_blank">Contato</a>
+                <a class="nav-link arredondar" href="" >Contato</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link arredondar" href="" target="_blank">Sobre Nós</a>
             </li>
-            <?php
-            session_start();
-            if (isset ($_SESSION['User']) == true) {
-                echo '<li class="nav-item">
-                        <a class="nav-link arredondar" href="Perfil.php">Perfil</a>
-                       </li>';
-            }
-            ?>
+
+            <li class="nav-item">
+                <a class="nav-link arredondar" href="Perfil.php">Perfil</a>
+            </li>
+
         </ul>
 
-        <?php
-
-        if (isset ($_SESSION['User']) == true) {
-            echo '<div class="d-flex justify-content-center">
-                    <span style="color: lightgray" class="nav-link arredondar" href="Perfil.php">Bem vindo ,  '.$_SESSION['User'].'</span>
-                   </div>';
-        }
-        ?>
-
         <div class="d-flex justify-content-center">
-            <a class="nav-link  text-center loginInput" id='Login'>Login</a>
-            <a class="nav-link text-center Registrar" id='Registrar'>Cadastrar</a>
+            <span style="color: lightgray" class="nav-link arredondar" href="Perfil.php">Bem vindo ,  <?php echo $_SESSION['User']; ?></span>
         </div>
 
-
+        <div class="d-flex justify-content-center">
+            <!--            <a class="nav-link  text-center loginInput" id='Login'>Login</a>-->
+            <a class="nav-link text-center Registrar" id='Registrar'>Sair</a>
+        </div>
 
         <div class="d-flex align-items-center ">
             <input class="form-control mr-sm-2 " type="text" placeholder="Pesquisar" aria-label="Search">
@@ -73,7 +66,7 @@
         <div class="card cardFormulario">
             <!--            inicia aqui-->
             <div class="card-body">
-                <h3 class="text-center titulo"> Cadastro <i class="fas fa-address-card"></i></h3>
+                <h3 class="text-center titulo"> Perfil <i class="fas fa-address-card"></i></h3>
                 <form id="formulario" class="formulario" data-toggle="validator">
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -107,7 +100,7 @@
                             </div>
                             <input type="email" class="form-control arredondar" id="Email"
                                    placeholder="nome@exemplo.com" data-error="Por favor, informe um email valido."
-                                   required>
+                                   disabled>
                         </div>
                         <div class="error help-block with-errors"></div>
                     </div>
@@ -118,8 +111,8 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text arredondar"> <i class="fas fa-id-card-alt"></i></span>
                                 </div>
-                                <input type="text" class="form-control arredondar" id="CPF" placeholder="123.123.123-00"
-                                       data-error="Por favor, informe um CPF correto." required>
+                                <input  value="<?php echo $_SESSION['User']; ?>" type="text" class="form-control arredondar" id="CPF" placeholder="123.123.123-00"
+                                       data-error="Por favor, informe um CPF correto." disabled>
                             </div>
                             <div class="error help-block with-errors"></div>
                         </div>
@@ -197,7 +190,7 @@
                     </div>
 
                     <div class="form-group" style="display: flex; justify-content:flex-end;">
-                        <button id="cadastrar" type="button" class="btn btn-success">Cadastrar</button>
+                        <button id="cadastrar" type="button" class="btn btn-primary">Alterar</button>
                     </div>
 
                     <div class="alert alert-danger testando text-center" id="alerta2" role="alert"
@@ -226,8 +219,11 @@
                          style="display: none; justify-content: flex-start;">
                         <strong>Erro! </strong> CPF <strong> Inválido !</strong>
                     </div>
+
                 </form>
+
             </div>
+
             <!--            termina aqui-->
         </div>
     </div>

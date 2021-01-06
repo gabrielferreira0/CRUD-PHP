@@ -47,6 +47,7 @@ $(document).ready(function () {
         $('.geral').html(loginHTML);
         let CPF = $("#CPF-login");
         CPF.mask('999.999.999-99');
+
     });
 
     $('#Conteudo').on('click', '#Registrar', function () {
@@ -76,7 +77,7 @@ $(document).ready(function () {
             '                                    <span class="input-group-text arredondar"> <i class="fas fa-lock"></i></span>\n' +
             '                                </div>\n' +
             '                                <input type="password" class="form-control arredondar" id="Senha" placeholder="Senha"\n' +
-            '                                       maxlength="10" required>\n' +
+            '                                       maxlength="20" required>\n' +
             '                            </div>\n' +
             '                            <div class="error help-block with-errors"></div>\n' +
             '                        </div>\n' +
@@ -254,18 +255,14 @@ $(document).ready(function () {
                             timer: 1500
                         })
                         break;
-                    case 'null':
-                        $("#alerta6").show().fadeOut(4000);
-                        break;
                     default :
-                        alert(rs);
+                        window.location.href = "Perfil.php";
                 }
             },
             error: function (e) {
                 bootbox.alert("<h2>Erro :(</h2><br/>Não foi possivel realizar essa operação.</br>");
             }
         });
-
     });
 
     $('#Conteudo').on('click', '#cadastrar', function () {
