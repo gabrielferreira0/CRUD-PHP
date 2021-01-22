@@ -67,8 +67,12 @@ $(document).ready(function () {
                 senha_login: senha_login,
             },
             success: function (rs) {
+                alert(rs);
                 switch (rs) {
-                    case 'dados_invalidos':
+                    case 'true':
+                        window.location.href = "Perfil.php";
+                        break;
+                    default :
                         Swal.fire({
                             position: 'center',
                             icon: 'error',
@@ -76,9 +80,6 @@ $(document).ready(function () {
                             showConfirmButton: false,
                             timer: 1500
                         })
-                        break;
-                    default :
-                        window.location.href = "Perfil.php";
                 }
             },
             error: function (e) {

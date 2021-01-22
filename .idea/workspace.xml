@@ -45,6 +45,7 @@
       <workItem from="1609621761765" duration="142000" />
       <workItem from="1609879615720" duration="8776000" />
       <workItem from="1609889236642" duration="5566000" />
+      <workItem from="1611357532189" duration="1294000" />
     </task>
     <servers />
   </component>
@@ -60,8 +61,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Crud/docs/js/teste.js</url>
-          <line>267</line>
-          <properties lambdaOrdinal="-1" />
+          <line>268</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
