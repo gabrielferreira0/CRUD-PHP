@@ -50,6 +50,43 @@ $(document).ready(function () {
 
     });
 
+
+    $('#Conteudo').on('click', '#Logar', function () {
+
+        let CPF_login = $('#CPF-login').val();
+        let senha_login = $('#senha-login').val();
+        let url = '../crud/class/index.php';
+        $.ajax({
+            type: "POST",
+            dataType: 'text',
+            url: url,
+            async: true,
+            data: {
+                rq: 'login',
+                CPF_login: CPF_login,
+                senha_login: senha_login,
+            },
+            success: function (rs) {
+                switch (rs) {
+                    case 'dados_invalidos':
+                        Swal.fire({
+                            position: 'center',
+                            icon: 'error',
+                            title: 'Dados invalidos!',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                        break;
+                    default :
+                        window.location.href = "Perfil.php";
+                }
+            },
+            error: function (e) {
+                bootbox.alert("<h2>Erro :(</h2><br/>Não foi possivel realizar essa operação.</br>");
+            }
+        });
+    });
+
     $('#Conteudo').on('click', '#Registrar', function () {
 
 
@@ -228,43 +265,6 @@ $(document).ready(function () {
         telefone.mask('(00) 0000-0000');
     });
 
-
-    $('#Conteudo').on('click', '#Logar', function () {
-
-        let CPF_login = $('#CPF-login').val();
-        let senha_login = $('#senha-login').val();
-        let url = '../crud/class/index.php';
-        $.ajax({
-            type: "POST",
-            dataType: 'text',
-            url: url,
-            async: true,
-            data: {
-                rq: 'login',
-                CPF_login: CPF_login,
-                senha_login: senha_login,
-            },
-            success: function (rs) {
-                switch (rs) {
-                    case 'dados_invalidos':
-                        Swal.fire({
-                            position: 'center',
-                            icon: 'error',
-                            title: 'Dados invalidos!',
-                            showConfirmButton: false,
-                            timer: 1500
-                        })
-                        break;
-                    default :
-                        window.location.href = "Perfil.php";
-                }
-            },
-            error: function (e) {
-                bootbox.alert("<h2>Erro :(</h2><br/>Não foi possivel realizar essa operação.</br>");
-            }
-        });
-    });
-
     $('#Conteudo').on('click', '#cadastrar', function () {
         let username = $("#Username").val();
         let senha = $("#Senha").val();
@@ -334,6 +334,10 @@ $(document).ready(function () {
             }
         });
 
+    });
+
+    $('#Conteudo').on('click', '#Alterar', function () {
+        alert("Falta fazer a função Update")
     });
 
 });

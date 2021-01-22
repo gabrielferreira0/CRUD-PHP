@@ -40,6 +40,10 @@ body {
     background-color: #4faddb;
     color: #000;
 }
+.menu a.selected {
+    background-color: #4faddb;
+    color: #000;
+}
 
 .arredondar {
     border-radius: 10px;

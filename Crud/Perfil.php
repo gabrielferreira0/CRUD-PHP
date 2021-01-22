@@ -41,7 +41,7 @@ include ('class/verificar_login.php')
             </li>
 
             <li class="nav-item">
-                <a class="nav-link arredondar" href="Perfil.php">Perfil</a>
+                <a class="nav-link arredondar selected" href="Perfil.php">Perfil</a>
             </li>
 
         </ul>
@@ -75,7 +75,7 @@ include ('class/verificar_login.php')
                                 <div class="input-group-prepend">
                                     <span class="input-group-text arredondar"> <i class="fas fa-user"></i></span>
                                 </div>
-                                <input type="text" class="form-control arredondar" id="Username" placeholder="Usuario"
+                                <input  value="<?php echo $_SESSION['User']; ?>"  type="text" class="form-control arredondar" id="Username" placeholder="Usuario"
                                        required>
                             </div>
                             <div class="error help-block with-errors"></div>
@@ -86,7 +86,7 @@ include ('class/verificar_login.php')
                                 <div class="input-group-prepend">
                                     <span class="input-group-text arredondar"> <i class="fas fa-lock"></i></span>
                                 </div>
-                                <input type="password" class="form-control arredondar" id="Senha" placeholder="Senha"
+                                <input value="<?php echo $_SESSION['Password']; ?>" type="text" class="form-control arredondar" id="Senha" placeholder="Senha"
                                        maxlength="20" required>
                             </div>
                             <div class="error help-block with-errors"></div>
@@ -98,7 +98,7 @@ include ('class/verificar_login.php')
                             <div class="input-group-prepend">
                                 <span class="input-group-text arredondar"> <i class="fas fa-envelope"></i></span>
                             </div>
-                            <input type="email" class="form-control arredondar" id="Email"
+                            <input  value="<?php echo $_SESSION['Email']; ?>" type="email" class="form-control arredondar" id="Email"
                                    placeholder="nome@exemplo.com" data-error="Por favor, informe um email valido."
                                    disabled>
                         </div>
@@ -111,7 +111,7 @@ include ('class/verificar_login.php')
                                 <div class="input-group-prepend">
                                     <span class="input-group-text arredondar"> <i class="fas fa-id-card-alt"></i></span>
                                 </div>
-                                <input  value="<?php echo $_SESSION['User']; ?>" type="text" class="form-control arredondar" id="CPF" placeholder="123.123.123-00"
+                                <input  value="<?php echo $_SESSION['CPF']; ?>" type="text" class="form-control arredondar" id="CPF" placeholder="123.123.123-00"
                                        data-error="Por favor, informe um CPF correto." disabled>
                             </div>
                             <div class="error help-block with-errors"></div>
@@ -124,7 +124,7 @@ include ('class/verificar_login.php')
                                     <span class="input-group-text arredondar"> <i
                                                 class="fas fa-calendar-alt"></i></span>
                                 </div>
-                                <input type="date" class="form-control arredondar" id="dt-nascimento"
+                                <input  value="<?php echo $_SESSION['Nascimento']; ?>"  type="date" class="form-control arredondar" id="dt-nascimento"
                                        placeholder="Nascimento" required>
                             </div>
                             <div class="error help-block with-errors"></div>
@@ -134,16 +134,15 @@ include ('class/verificar_login.php')
                         <div class="form-group col-xl-6">
                             <label for="Cidade">Cidade:</label>
                             <div class="input-group ">
-
                                 <div class="input-group-prepend">
                                     <span class="input-group-text arredondar"> <i class="fas fa-city"></i></span>
                                 </div>
 
-                                <input type="text" class="form-control" id="Cidade"
+                                <input  value="<?php echo $_SESSION['Cidade']; ?>" type="text" class="form-control" id="Cidade"
                                        placeholder="Brasilia-DF" required>
                                 <div class="input-group-append">
                                     <select class="form-control " id="UF" required>
-                                        <option value="estado">UF</option>
+                                        <option value="estado" ><?php echo $_SESSION['UF']; ?></option>
                                         <option value="AC">AC</option>
                                         <option value="AL">AL</option>
                                         <option value="AP">AP</option>
@@ -182,7 +181,7 @@ include ('class/verificar_login.php')
                                 <div class="input-group-prepend">
                                     <span class="input-group-text arredondar"> <i class="fas fa-phone"></i></span>
                                 </div>
-                                <input type="text" class="form-control arredondar phone-mask" id="Telefone"
+                                <input   value="<?php echo $_SESSION['Telefone']; ?>" type="text" class="form-control arredondar phone-mask" id="Telefone"
                                        placeholder="(DD) 0000-0000" required>
                             </div>
                             <div class="error help-block with-errors"></div>
@@ -190,7 +189,7 @@ include ('class/verificar_login.php')
                     </div>
 
                     <div class="form-group" style="display: flex; justify-content:flex-end;">
-                        <button id="cadastrar" type="button" class="btn btn-primary">Alterar</button>
+                        <button id="Alterar" type="button" class="btn btn-primary">Alterar</button>
                     </div>
 
                     <div class="alert alert-danger testando text-center" id="alerta2" role="alert"
