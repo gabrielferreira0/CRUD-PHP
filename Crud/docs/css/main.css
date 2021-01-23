@@ -40,6 +40,7 @@ body {
     background-color: #4faddb;
     color: #000;
 }
+
 .menu a.selected {
     background-color: #4faddb;
     color: #000;
@@ -98,7 +99,9 @@ footer {
     background-color: #4faddb;
     color: #000;
 }
-#login, #Registrar{
+
+#login, #Registrar, #Deslogar {
     color: white;
     cursor: pointer;
 }
+

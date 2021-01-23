@@ -52,7 +52,7 @@ include ('class/verificar_login.php')
 
         <div class="d-flex justify-content-center">
             <!--            <a class="nav-link  text-center loginInput" id='Login'>Login</a>-->
-            <a class="nav-link text-center Registrar" id='Registrar'>Sair</a>
+            <a class="nav-link text-center Registrar" id='Deslogar'>Sair</a>
         </div>
 
         <div class="d-flex align-items-center ">
@@ -189,7 +189,8 @@ include ('class/verificar_login.php')
                     </div>
 
                     <div class="form-group" style="display: flex; justify-content:flex-end;">
-                        <button id="Alterar" type="button" class="btn btn-primary">Alterar</button>
+                        <button  style="margin:3px;"  id="Excluir"  type="button" class="btn btn-danger">Excluir</button>
+                        <button  style="margin:3px;"  id="Alterar"  type="button" class="btn btn-primary">Alterar</button>
                     </div>
 
                     <div class="alert alert-danger testando text-center" id="alerta2" role="alert"
@@ -213,7 +214,6 @@ include ('class/verificar_login.php')
                          style="display: none; justify-content: flex-start;">
                         <strong>Erro! </strong> Preencha <strong> todos os campos! </strong>
                     </div>
-
                     <div class="alert alert-danger testando text-center" id="alerta7" role="alert"
                          style="display: none; justify-content: flex-start;">
                         <strong>Erro! </strong> CPF <strong> Inválido !</strong>

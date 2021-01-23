@@ -50,7 +50,6 @@ $(document).ready(function () {
 
     });
 
-
     $('#Conteudo').on('click', '#Logar', function () {
 
         let CPF_login = $('#CPF-login').val();
@@ -67,7 +66,7 @@ $(document).ready(function () {
                 senha_login: senha_login,
             },
             success: function (rs) {
-                alert(rs);
+                //alert(rs);
                 switch (rs) {
                     case 'true':
                         window.location.href = "Perfil.php";
@@ -338,8 +337,108 @@ $(document).ready(function () {
     });
 
     $('#Conteudo').on('click', '#Alterar', function () {
-        alert("Falta fazer a função Update")
+        let username = $("#Username").val();
+        let senha = $("#Senha").val();
+        let nascimento = $("#dt-nascimento").val();
+        let cidade = $("#Cidade").val();
+        let telefone = $('#Telefone').val();
+        let UF = $("#UF option:selected").val();
+        let url = '../crud/class/index.php';
+        $.ajax({
+            type: "POST",
+            dataType: 'text',
+            url: url,
+            async: true,
+            data: {
+                rq: 'update',
+                Username: username,
+                Senha: senha,
+                Nascimento: nascimento,
+                Cidade: cidade,
+                Telefone: telefone,
+                UF: UF,
+            },
+            success: function (rs) {
+                console.log(rs);
+                switch (rs) {
+                    case 'true':
+                        Swal.fire({
+                            position: 'center',
+                            icon: 'success',
+                            title: 'Dados alterados com sucesso!',
+                            showConfirmButton: false,
+                            timer: 1500,
+                        })
+                        setTimeout(function () {
+                            location.reload();
+                        }, 1700);
+                        break;
+                    case 'false':
+                        bootbox.alert("<h2>Erro :(</h2><br/>Não foi possivel realizar essa operação.</br>");
+                        break;
+                    case 'null':
+                        $("#alerta6").show().fadeOut(4000);
+                        break;
+                }
+            },
+            error: function (e) {
+                bootbox.alert("<h2>Erro :(</h2><br/>Não foi possivel realizar essa operação.</br>");
+            }
+        });
     });
+
+
+    $('#Conteudo').on('click', '#Excluir', function () {
+        let url = '../crud/class/index.php';
+        $.ajax({
+            type: "POST",
+            dataType: 'text',
+            url: url,
+            async: true,
+            data: {
+                rq: 'delete',
+            },
+            success: function (rs) {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Cadastro deletado com sucesso!',
+                    showConfirmButton: false,
+                    timer: 1500,
+                })
+                setTimeout(function () {
+                    location.reload();
+                }, 1700);
+            },
+            error: function (e) {
+                bootbox.alert("<h2>Erro :(</h2><br/>Não foi possivel realizar essa operação.</br>");
+            }
+        });
+    });
+
+    $('#Conteudo').on('click', '#Deslogar', function () {
+        let url = '../crud/class/index.php';
+        $.ajax({
+            type: "POST",
+            dataType: 'text',
+            url: url,
+            async: true,
+            data: {
+                rq: 'deslogar',
+            },
+            success: function (rs) {
+                switch (rs) {
+                    case 'true':
+                        window.location.href = "index.php";
+                        break;
+                }
+            },
+            error: function (e) {
+                bootbox.alert("<h2>Erro :(</h2><br/>Não foi possivel realizar essa operação.</br>");
+            }
+        });
+    });
+
 
 });
 

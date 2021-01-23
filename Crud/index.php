@@ -38,7 +38,7 @@
             </li>
             <?php
             session_start();
-            if (isset ($_SESSION['CPF']) == true) {
+            if (isset ($_SESSION['CPF'])) {
                 echo '<li class="nav-item">
                         <a class="nav-link arredondar" href="Perfil.php">Perfil</a>
                        </li>';
@@ -48,7 +48,7 @@
 
         <?php
 
-        if (isset ($_SESSION['CPF']) == true) {
+        if (isset ($_SESSION['CPF'])) {
             echo '<div class="d-flex justify-content-center">
                     <span style="color: lightgray" class="nav-link arredondar" href="Perfil.php">Bem vindo ,  '.$_SESSION['User'].'</span>
                    </div>';
@@ -56,9 +56,9 @@
         ?>
 
         <?php
-        if (isset ($_SESSION['CPF']) == true) {
+        if (isset ($_SESSION['CPF'])) {
             echo '<div class="d-flex justify-content-center">
-            <a class="nav-link text-center Registrar" id="Registrar">Sair</a>
+            <a class="nav-link text-center Registrar" id="Deslogar">Sair</a>
         </div>';
         } else {
             echo '  <div class="d-flex justify-content-center">
@@ -67,7 +67,6 @@
         </div>';
         }
         ?>
-
 
         <div class="d-flex align-items-center ">
             <input class="form-control mr-sm-2 " type="text" placeholder="Pesquisar" aria-label="Search">

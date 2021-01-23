@@ -4,7 +4,7 @@ require_once 'Banco.php';
 
 class Login extends Banco
 {
-    public function Logar()
+    public function logar()
     {
         //session_start();
         $CPF_login = $_POST["CPF_login"];
@@ -14,6 +14,7 @@ class Login extends Banco
         $dados = pg_fetch_array($rs, 0, PGSQL_NUM);
 
         if (pg_num_rows($rs) > 0) {
+            $_SESSION['id'] = $dados[0];
             $_SESSION['User'] = $dados[1];
             $_SESSION['Password'] = $dados[2];
             $_SESSION['Email'] = $dados[3];
