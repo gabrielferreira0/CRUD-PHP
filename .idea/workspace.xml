@@ -47,7 +47,8 @@
       <workItem from="1609889236642" duration="5566000" />
       <workItem from="1611357532189" duration="2857000" />
       <workItem from="1611368226236" duration="1016000" />
-      <workItem from="1611410829368" duration="7303000" />
+      <workItem from="1611410829368" duration="7518000" />
+      <workItem from="1611538300284" duration="5096000" />
     </task>
     <servers />
   </component>
@@ -69,20 +70,23 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Crud/docs/js/teste.js</url>
           <line>338</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Crud/docs/js/teste.js</url>
-          <line>418</line>
-          <properties lambdaOrdinal="-1" />
+          <line>422</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Crud/docs/js/teste.js</url>
-          <line>390</line>
-          <properties lambdaOrdinal="-1" />
+          <line>394</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/Crud/docs/js/teste.js</url>
+          <line>89</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

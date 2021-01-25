@@ -156,7 +156,7 @@
                                        placeholder="Brasilia-DF" required>
                                 <div class="input-group-append">
                                     <select class="form-control " id="UF" required>
-                                        <option value="estado">UF</option>
+                                        <option value="">UF</option>
                                         <option value="AC">AC</option>
                                         <option value="AL">AL</option>
                                         <option value="AP">AP</option>

@@ -47,7 +47,7 @@ include ('class/verificar_login.php')
         </ul>
 
         <div class="d-flex justify-content-center">
-            <span style="color: lightgray" class="nav-link arredondar" href="Perfil.php">Bem vindo ,  <?php echo $_SESSION['User']; ?></span>
+            <span  id ='Welcome' style="color: lightgray" class="nav-link arredondar" href="Perfil.php">Bem vindo, <?php echo $_SESSION['User']; ?></span>
         </div>
 
         <div class="d-flex justify-content-center">
@@ -142,7 +142,7 @@ include ('class/verificar_login.php')
                                        placeholder="Brasilia-DF" required>
                                 <div class="input-group-append">
                                     <select class="form-control " id="UF" required>
-                                        <option value="estado" ><?php echo $_SESSION['UF']; ?></option>
+                                        <option id="UF2" value="<?php echo $_SESSION['UF']; ?>"><?php echo $_SESSION['UF']; ?></option>
                                         <option value="AC">AC</option>
                                         <option value="AL">AL</option>
                                         <option value="AP">AP</option>

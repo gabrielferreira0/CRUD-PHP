@@ -359,9 +359,17 @@ $(document).ready(function () {
                 UF: UF,
             },
             success: function (rs) {
+
                 console.log(rs);
                 switch (rs) {
-                    case 'true':
+                    case 'false':
+                        bootbox.alert("<h2>Erro :(</h2><br/>Não foi possivel realizar essa operação.</br>");
+                        break;
+                    case 'null':
+                        $("#alerta6").show().fadeOut(4000);
+                        break;
+                    default:
+                        rs = rs.split(",")
                         Swal.fire({
                             position: 'center',
                             icon: 'success',
@@ -369,15 +377,12 @@ $(document).ready(function () {
                             showConfirmButton: false,
                             timer: 1500,
                         })
-                        setTimeout(function () {
-                            location.reload();
-                        }, 1700);
-                        break;
-                    case 'false':
-                        bootbox.alert("<h2>Erro :(</h2><br/>Não foi possivel realizar essa operação.</br>");
-                        break;
-                    case 'null':
-                        $("#alerta6").show().fadeOut(4000);
+                        $('#Welcome').html("Bem vindo, " + rs[0]);
+                        // $('#Senha').html(rs[1]);
+                        // $('#dt-nascimento').html(rs[2]);
+                        // $('#Cidade').html(rs[3]);
+                        // $('#Telefone').html(rs[4]);
+                        // $('#UF2').html(rs[5]);
                         break;
                 }
             },
@@ -386,7 +391,6 @@ $(document).ready(function () {
             }
         });
     });
-
 
     $('#Conteudo').on('click', '#Excluir', function () {
         let url = '../crud/class/index.php';
